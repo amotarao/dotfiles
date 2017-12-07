@@ -18,3 +18,7 @@ brew install caskroom/cask/brew-cask
 
 # insatll wget
 brew install wget
+
+# install zsh
+brew install --disable-etcdir zsh
+./installs/zsh.sh
