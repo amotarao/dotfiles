@@ -1,0 +1,33 @@
+[user]
+    name = Amon Sawamura
+    email = amon.sawamura@gmail.com
+
+[color]
+    ui = auto
+
+[alias]
+    a = add
+    aa = add -all
+    ap = add -p
+
+    c = commit -m
+    ca = commit -a -m
+    ci = commit
+    cf = commit -m "first commit"
+    cfe = commit --allow-empty -m "first commit"
+    amend = commit --amend
+
+    co = checkout
+    cb = checkout -b
+
+    re = rebase -i head~
+    ree = rebase -i head~~
+    reee = rebase -i head~~~
+    reeee = rebase -i head~~~~
+    reeeee = rebase -i head~~~~~
+
+    ra = rebase --abort
+    rc = rebase --continue
+    rs = rebase --skip
+
+    #graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
