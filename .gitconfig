@@ -7,11 +7,11 @@
 
 [alias]
     a = add
-    aa = add -all
+    aa = add --all
     ap = add -p
 
     c = commit -m
-    ca = commit -a -m
+    ca = commit -am
     ci = commit
     cf = commit -m "first commit"
     cfe = commit --allow-empty -m "first commit"
