@@ -22,3 +22,6 @@ brew install wget
 # install zsh
 brew install --disable-etcdir zsh
 ./installs/zsh.sh
+
+# set symbolic link
+./commands/ln.sh
