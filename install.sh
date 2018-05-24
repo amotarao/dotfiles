@@ -23,5 +23,9 @@ brew install wget
 brew install --disable-etcdir zsh
 ./installs/zsh.sh
 
+# install rm2trash
+brew install --disable-etcdir zsh
+./installs/rm2trash.sh
+
 # set symbolic link
 ./commands/ln.sh
