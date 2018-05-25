@@ -21,4 +21,4 @@ ZSH_THEME="robbyrussell"
 plugins=(git ruby osx bundler brew rails emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
-source .zsh/alias.sh
+source $HOME/.zsh/alias.sh
