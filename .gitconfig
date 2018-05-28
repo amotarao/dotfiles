@@ -20,11 +20,11 @@
     co = checkout
     cb = checkout -b
 
-    re = rebase -i head~
-    ree = rebase -i head~~
-    reee = rebase -i head~~~
-    reeee = rebase -i head~~~~
-    reeeee = rebase -i head~~~~~
+    re = rebase -i head~~
+    ree = rebase -i head~~~
+    reee = rebase -i head~~~~
+    reeee = rebase -i head~~~~~
+    reeeee = rebase -i head~~~~~~
 
     ra = rebase --abort
     rc = rebase --continue
