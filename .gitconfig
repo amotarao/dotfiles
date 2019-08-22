@@ -7,29 +7,12 @@
 
 [alias]
     a = add
-    aa = add --all
-    ap = add -p
 
     c = commit -m
-    ca = commit -am
     ci = commit
-    cf = commit -m "first commit"
-    cfe = commit --allow-empty -m "first commit"
     amend = commit --amend
 
-    co = checkout
-    cb = checkout -b
-
-    re = rebase -i head~~
-    ree = rebase -i head~~~
-    reee = rebase -i head~~~~
-    reeee = rebase -i head~~~~~
-    reeeee = rebase -i head~~~~~~
-
-    ra = rebase --abort
-    rc = rebase --continue
-    rs = rebase --skip
-
+    re = rebase
     st = status
 
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
