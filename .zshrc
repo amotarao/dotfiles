@@ -8,6 +8,7 @@ export PATH=$PATH:/sbin
 
 export PATH=$PATH:$HOME/.nodebrew/current/bin
 export PATH=$PATH:$HOME/google-cloud-sdk/bin
+export PATH=$PATH:$HOME/development/flutter/bin
 
 export GOPATH=$HOME/work
 export ZSH=$HOME/.oh-my-zsh
