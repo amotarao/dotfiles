@@ -11,8 +11,8 @@ fi
 brew update
 brew upgrade
 
-./commands/set-symbolic.sh
-
 ./installs/brew-install.sh
 ./installs/nodebrew.sh
 ./installs/rm2trash.sh
+
+./commands/set-symbolic.sh
