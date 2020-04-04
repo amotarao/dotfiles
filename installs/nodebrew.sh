@@ -1,10 +1,6 @@
 #!/bin/bash
 
-if test ! $(which node); then
-	echo "Installing nodebrew."
-	curl -L git.io/nodebrew | perl - setup
-else
-	echo "Node.js is already installed."
-fi
-
-nodebrew install-binary stable
+nodebrew install-binary 10
+nodebrew install-binary 12
+nodebrew install-binary 13
+nodebrew use 10

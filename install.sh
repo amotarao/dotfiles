@@ -2,30 +2,17 @@
 
 # install Homebrew
 if test ! $(which brew); then
-	echo "Installing Homebrew."
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "Installing Homebrew."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
-	echo "Homebrew is already installed."
+  echo "Homebrew is already installed."
 fi
 
 brew update
 brew upgrade
 
-# install brew-cask
-brew tap caskroom/cask
-brew install caskroom/cask/brew-cask
-./installs/brew-cask.sh
+./commands/set-symbolic.sh
 
-# insatll wget
-brew install wget
-
-# install zsh
-brew install --disable-etcdir zsh
-./installs/zsh.sh
-
-# install rm2trash
-brew install --disable-etcdir zsh
+./installs/brew-install.sh
+./installs/nodebrew.sh
 ./installs/rm2trash.sh
-
-# set symbolic link
-./commands/ln.sh

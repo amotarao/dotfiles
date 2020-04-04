@@ -7,7 +7,6 @@
 
 [alias]
     a = add
-
     c = commit -m
     ci = commit
     co = checkout
