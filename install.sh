@@ -13,6 +13,7 @@ brew upgrade
 
 ./installs/brew-install.sh
 ./installs/nodebrew.sh
+./installs/node.sh
 ./installs/rm2trash.sh
 
 ./commands/set-symbolic.sh
