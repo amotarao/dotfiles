@@ -1,0 +1,13 @@
+dbaeumer.vscode-eslint
+ducksoupdev.Vue2
+EditorConfig.EditorConfig
+karigari.chat
+MS-CEINTL.vscode-language-pack-ja
+ms-vsliveshare.vsliveshare
+ms-vsliveshare.vsliveshare-audio
+ms-vsliveshare.vsliveshare-pack
+octref.vetur
+rbbit.typescript-hero
+skyapps.fish-vscode
+toba.vsfire
+xabikos.JavaScriptSnippets
