@@ -16,3 +16,5 @@ brew cask install sketch
 brew cask install visual-studio-code
 brew cask install slack
 brew cask install notion
+
+brew cask install google-cloud-sdk
