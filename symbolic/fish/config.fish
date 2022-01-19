@@ -1,3 +1,8 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    nodenv init -|psub
+end
+
 . ~/.config/fish/alias.fish
 
 set PATH $PATH $HOME/bin
