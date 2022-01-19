@@ -7,16 +7,16 @@ brew install wget
 brew install fish
 brew install rbenv
 
-brew cask install google-chrome
-brew cask install homebrew/cask-versions/google-chrome-canary
-brew cask install firefox
-brew cask install microsoft-edge
+brew install --cask google-chrome
+brew install --cask homebrew/cask-versions/google-chrome-canary
+brew install --cask firefox
+brew install --cask microsoft-edge
 
-brew cask install adobe-creative-cloud 
-brew cask install sketch
-brew cask install visual-studio-code
-brew cask install slack
-brew cask install notion
-brew cask install wkhtmltopdf
+brew install --cask adobe-creative-cloud 
+brew install --cask sketch
+brew install --cask visual-studio-code
+brew install --cask slack
+brew install --cask notion
+brew install --cask wkhtmltopdf
 
-brew cask install google-cloud-sdk
+brew install --cask google-cloud-sdk
