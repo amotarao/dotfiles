@@ -2,7 +2,7 @@
 
 brew install cask
 brew install git
-brew install nodebrew
+brew install nodenv
 brew install wget
 brew install fish
 

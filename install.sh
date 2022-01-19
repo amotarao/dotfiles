@@ -12,7 +12,7 @@ brew update
 brew upgrade
 
 ./installs/brew-install.sh
-./installs/nodebrew.sh
+./installs/nodenv.sh
 ./installs/node.sh
 ./installs/rm2trash.sh
 
