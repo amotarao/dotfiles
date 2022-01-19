@@ -13,7 +13,6 @@ brew install --cask firefox
 brew install --cask microsoft-edge
 
 brew install --cask adobe-creative-cloud 
-brew install --cask sketch
 brew install --cask visual-studio-code
 brew install --cask slack
 brew install --cask notion
