@@ -1,6 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    nodenv init -|psub
+    eval (nodenv init - | source)
 end
 
 . ~/.config/fish/alias.fish
