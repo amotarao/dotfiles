@@ -5,6 +5,7 @@ brew install git
 brew install nodenv
 brew install wget
 brew install fish
+brew install rbenv
 
 brew cask install google-chrome
 brew cask install homebrew/cask-versions/google-chrome-canary
