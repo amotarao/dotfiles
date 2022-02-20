@@ -1,12 +1,9 @@
 {
   "workbench.startupEditor": "newUntitledFile",
-
   "window.zoomLevel": -1,
   "editor.fontSize": 12,
   "editor.lineHeight": 18,
   "editor.renderWhitespace": "boundary",
-
-  // "editor.formatOnSave": true,
   "eslint.enable": true,
   "javascript.validate.enable": false,
   "typescript.validate.enable": false,
@@ -81,5 +78,7 @@
       "name": "Vue Green",
       "value": "#42b883"
     }
-  ]
+  ],
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
