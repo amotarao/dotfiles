@@ -1,3 +1,4 @@
+export PATH="$HOME/.nodenv/shims:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/flutter/bin:$PATH"
 
