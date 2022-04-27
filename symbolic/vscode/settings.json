@@ -1,30 +1,17 @@
 {
-  "workbench.startupEditor": "newUntitledFile",
-  "window.zoomLevel": -1,
   "editor.fontSize": 12,
   "editor.lineHeight": 18,
   "editor.renderWhitespace": "boundary",
-  "eslint.enable": true,
-  "javascript.validate.enable": false,
-  "typescript.validate.enable": false,
-  "explorer.confirmDragAndDrop": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "git.enableSmartCommit": true,
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "explorer.confirmDelete": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggestSelection": "first",
   "editor.tabSize": 2,
+  "eslint.enable": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "window.zoomLevel": -1,
+  "workbench.startupEditor": "newUntitledFile",
+
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -79,6 +66,22 @@
       "value": "#42b883"
     }
   ],
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
