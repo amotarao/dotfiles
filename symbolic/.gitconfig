@@ -1,3 +1,6 @@
+[core]
+    ignorecase = false
+
 [user]
     name = Amon Sawamura
     email = amotarao@gmail.com
