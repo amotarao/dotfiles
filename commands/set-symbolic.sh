@@ -10,3 +10,4 @@ ln -sf $PWD/symbolic/omf ~/.config
 
 mkdir -p ~/Library/Application\ Support/Code/User
 ln -sf $PWD/symbolic/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -sf $PWD/symbolic/cursor/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
