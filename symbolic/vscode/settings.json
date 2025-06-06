@@ -4,6 +4,7 @@
   "editor.renderWhitespace": "boundary",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
+  "window.restoreWindows": "none",
   "git.enableSmartCommit": true,
   "explorer.confirmDragAndDrop": false,
   "typescript.updateImportsOnFileMove.enabled": "always",

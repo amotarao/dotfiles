@@ -5,6 +5,7 @@
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.inlineSuggest.enabled": true,
+  "window.restoreWindows": "none",
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.activityBar.orientation": "vertical",
@@ -30,11 +31,25 @@
   "cSpell.enabledFileTypes": {
     "svg": false
   },
-  "launch": {
-    "configurations": [],
-    "compounds": []
-  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cursor.general.globalCursorIgnoreList": [
+    "**/.env",
+    "**/.env.*",
+    "**/credentials.json",
+    "**/credentials.*.json",
+    "**/secret.json",
+    "**/secrets.json",
+    "**/*.key",
+    "**/*.pem",
+    "**/*.pfx",
+    "**/*.p12",
+    "**/*.crt",
+    "**/*.cer",
+    "**/id_rsa",
+    "**/id_dsa",
+    "**/.ssh/id_*",
+    "**/.ssh/*"
+  ]
 }
