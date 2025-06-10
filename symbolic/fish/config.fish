@@ -1,9 +1,7 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-    eval (nodenv init - | source)
-end
+# volta
+set -gx VOLTA_HOME $HOME/.volta
+fish_add_path $VOLTA_HOME/bin
 
-. ~/.config/fish/alias.fish
-
-# bass source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
-# bass source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
+# bun 
+set -gx BUN_INSTALL $HOME/.bun
+fish_add_path $BUN_INSTALL/bin
