@@ -14,8 +14,10 @@
     "*.svg": "default"
   },
   "explorer.confirmDragAndDrop": false,
+  "git.enabled": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.path": "/usr/local/bin/git",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "diffEditor.ignoreTrimWhitespace": false,
   "gitlens.hovers.currentLine.over": "line",
