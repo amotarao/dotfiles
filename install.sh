@@ -12,8 +12,7 @@ brew update
 brew upgrade
 
 ./installs/brew-install.sh
-./installs/nodenv.sh
-./installs/node.sh
-./installs/rm2trash.sh
+./installs/volta.sh
+./installs/bun.sh
 
 ./commands/set-symbolic.sh
