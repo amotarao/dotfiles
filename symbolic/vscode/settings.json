@@ -5,10 +5,12 @@
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "window.restoreWindows": "none",
+  "window.zoomLevel": 0,
+  "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "explorer.confirmDragAndDrop": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "gitlens.hovers.currentLine.over": "line",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
@@ -18,15 +20,19 @@
     "markdown": false,
     "scminput": false
   },
-  "window.zoomLevel": -1,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "workbench.startupEditor": "none",
-  "git.confirmSync": false,
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.svg": "default"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "chat.mcp.gallery.enabled": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "claudeCode.useTerminal": true
 }
