@@ -1,9 +1,11 @@
 {
+  "editor.defaultFormatter": "prettier.prettier-vscode",
   "editor.fontSize": 11,
   "editor.lineHeight": 17,
   "editor.renderWhitespace": "boundary",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
+  "editor.inlineSuggest.enabled": true,
   "window.restoreWindows": "none",
   "window.zoomLevel": 0,
   "git.confirmSync": false,
@@ -12,7 +14,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "diffEditor.ignoreTrimWhitespace": true,
   "gitlens.hovers.currentLine.over": "line",
-  "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
@@ -25,9 +26,6 @@
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.svg": "default"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
