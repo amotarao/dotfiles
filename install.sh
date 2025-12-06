@@ -15,4 +15,7 @@ brew upgrade
 ./installs/volta.sh
 ./installs/bun.sh
 
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 ./commands/set-symbolic.sh
