@@ -18,4 +18,7 @@ brew upgrade
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# Gemini CLI
+npm install -g @google/gemini-cli
+
 ./commands/set-symbolic.sh
