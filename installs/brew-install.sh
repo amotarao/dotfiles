@@ -4,6 +4,7 @@ brew install cask
 brew install git
 brew install wget
 brew install zsh-autosuggestions
+brew install gh
 
 brew install --cask google-chrome
 brew install --cask google-chrome@canary
