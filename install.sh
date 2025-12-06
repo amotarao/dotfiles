@@ -22,3 +22,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 npm install -g @google/gemini-cli
 
 ./commands/set-symbolic.sh
+
+# macOS specific settings
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  defaults write com.apple.finder AppleShowAllFiles TRUE
+  defaults write com.apple.screencapture location "$HOME/Desktop/_ss"
+fi
