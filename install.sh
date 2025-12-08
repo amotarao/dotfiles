@@ -15,6 +15,9 @@ brew upgrade
 ./installs/volta.sh
 ./installs/bun.sh
 
+# Claude Code
+curl -fsSL https://claude.ai/install.sh | bash
+
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
