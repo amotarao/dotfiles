@@ -15,11 +15,7 @@
   "diffEditor.ignoreTrimWhitespace": true,
   "gitlens.hovers.currentLine.over": "line",
   "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": true,
-    "markdown": false,
-    "scminput": false
+    "*": true
   },
   "javascript.updateImportsOnFileMove.enabled": "never",
   "workbench.startupEditor": "none",
