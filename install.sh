@@ -12,7 +12,6 @@ brew update
 brew upgrade
 
 ./installs/brew-install.sh
-./installs/volta.sh
 ./installs/bun.sh
 
 # Claude Code
