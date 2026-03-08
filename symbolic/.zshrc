@@ -1,3 +1,5 @@
+eval "$(mise activate zsh)"
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # If you come from bash you might have to change your $PATH.
