@@ -28,5 +28,7 @@
   },
   "chat.mcp.gallery.enabled": true,
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "claudeCode.useTerminal": true
+  "gitlens.rebaseEditor.openOnPausedRebase": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "claudeCode.preferredLocation": "panel"
 }
