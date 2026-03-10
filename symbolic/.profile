@@ -9,4 +9,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Visual Studio Code (code)
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 
+# Mise
+eval "$(mise activate --shims)"
+
 export PATH="$HOME/.local/bin:$PATH"
