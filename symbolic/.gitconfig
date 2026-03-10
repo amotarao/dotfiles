@@ -1,5 +1,6 @@
 [core]
     ignorecase = false
+    editor = vim
 
 [user]
     name = Amon Sawamura
