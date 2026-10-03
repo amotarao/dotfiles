@@ -5,7 +5,6 @@ ln -sf $PWD/symbolic/.profile ~/.profile
 ln -sf $PWD/symbolic/.bash_profile ~/.bash_profile
 ln -sf $PWD/symbolic/.bashrc ~/.bashrc
 
-ln -sf $PWD/symbolic/.zsh ~/.zsh
 ln -sf $PWD/symbolic/.zprofile ~/.zprofile
 ln -sf $PWD/symbolic/.zshrc ~/.zshrc
 
