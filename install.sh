@@ -23,7 +23,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Gemini CLI
 npm install -g @google/gemini-cli
 
-./commands/set-symbolic.sh
+# dotfiles
+chezmoi init --source "$PWD" --apply
 
 # macOS specific settings
 if [[ "$OSTYPE" == "darwin"* ]]; then
