@@ -4,7 +4,7 @@
 # Usage: launch.sh [--base BRANCH --after ISSUE] [--next ISSUE[,ISSUE...]] <ISSUE_ID> [EXTRA_CONTEXT_FILE]
 #   ISSUE_ID            e.g. ABC-105
 #   EXTRA_CONTEXT_FILE  optional markdown appended to the prompt (background, clarified intent, ...)
-#                       If omitted, the latest .local/*_<issue>-session/context.md is used when present.
+#                       If omitted with --base, the latest .local/*_<issue>-session/context.md is used when present.
 #   --base BRANCH       stack on BRANCH instead of the default branch (worktree base and PR base)
 #   --after ISSUE       the issue whose PR is BRANCH (only used in the prompt text)
 #   --next ISSUES       issues to launch in order after this one opens its PR, each stacked on the previous
@@ -37,13 +37,14 @@ dir="$repo/.local/$(date +%Y-%m-%d)_${lower}-session"
 mkdir -p "$dir"
 prompt="$dir/prompt.md"
 
-if [[ -z "$extra" ]]; then
-  # Context written in advance for a stacked issue may have been saved on an earlier date.
+if [[ -z "$extra" && -n "$base" ]]; then
+  # A stacked issue is launched later by the previous session, so pick up context written in advance
+  # (possibly on an earlier date). Plain launches don't, to avoid attaching stale resume notes.
   extra="$(ls -t "$repo"/.local/*_"${lower}"-session/context.md 2>/dev/null | head -n 1 || true)"
 fi
 
 if [[ -n "$base" ]]; then
-  base_line="worktree を作る前に \`git fetch origin\` し、最新の \`origin/${base}\` をベースにすること。これは ${after:-前の issue} の PR に積む Stack PR なので、PR の base も \`${base}\` にすること"
+  base_line="worktree を作る前に \`git fetch origin\` し、最新の \`origin/${base}\` をベースにすること。これは ${after:-前の issue} の PR に積む Stack PR なので、PR の base も \`${base}\` にし、PR 本文の冒頭に「${after:-前の issue} の PR (#番号) に積んだ Stack PR。先にそちらをマージする」と書くこと"
 else
   base_line="worktree を作る前に \`git fetch origin\` し、最新の \`origin/<デフォルトブランチ>\` をベースにすること (ローカルのデフォルトブランチは古い可能性がある)"
 fi
