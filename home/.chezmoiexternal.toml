@@ -1,0 +1,6 @@
+# 公開できない Claude Code の設定・スキルは private リポジトリで管理する
+["works/amon/my-dot-claude"]
+    type = "git-repo"
+    url = "git@github.com:amotarao/my-dot-claude.git"
+    refreshPeriod = "168h"
+    pull.args = ["--ff-only"]
