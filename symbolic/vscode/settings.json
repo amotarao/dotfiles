@@ -12,23 +12,34 @@
   "git.enableSmartCommit": true,
   "explorer.confirmDragAndDrop": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "gitlens.hovers.currentLine.over": "line",
   "github.copilot.enable": {
-    "*": true
+    "*": true,
   },
   "javascript.updateImportsOnFileMove.enabled": "never",
   "workbench.startupEditor": "none",
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
-    "*.svg": "default"
+    "*.svg": "default",
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "chat.mcp.gallery.enabled": true,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "gitlens.rebaseEditor.openOnPausedRebase": false,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "claudeCode.preferredLocation": "panel"
+  "claudeCode.preferredLocation": "panel",
+  "workbench.colorTheme": "Dark Modern",
+  "workbench.browser.openLocalhostLinks": false,
+  "terminal.integrated.initialHint": false,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
 }
