@@ -12,6 +12,8 @@ issue ごとに cmux の workspace を 1 つ作り、その中で Claude Code �
 
 1. issue ID を決める。URL が渡されたら `/issue/ABC-104/...` の部分から ID を取り出す
    - 親 issue が 1 つだけ渡され、sub-issues を持っているなら、作業対象はその sub-issues にする (「起票した sub-issues を回して」という依頼でよくある形)
+     - `get_issue` では子の一覧が取れないので、`list_issues({ parentId: "ABC-100", fields: ["id", "title", "statusType"] })` で取る
+     - `statusType` が `completed` / `canceled` のものは除く。途中まで進んだ親で再実行したとき、終わった issue まで起動しないため
 2. issue が 2 つ以上なら、blocking 関係を調べて起動計画を立てる (次の節)。1 つなら飛ばしてよい
 3. リポジトリのメインディレクトリ (今いる場所) で、計画どおりにスクリプトを実行する
 
@@ -55,6 +57,11 @@ blocked な issue は、blocker の変更がないと実装もテストもでき
 
 前の issue のブランチ名は、前のセッションが作業を始めるまで決まらない。そのため、こちらで次の起動まで済ませておくことはできず、前のセッションに起動させる形にしている。
 
+報告のときに、次の 2 点もユーザーに伝える。
+
+- 前のセッションが `launch.sh` を実行するときに許可を求められると、承認されるまでチェーンが止まる。動きが止まっていたら、前の workspace で承認待ちになっていないかを見てもらう
+- 前の PR をマージしてもそのブランチが削除されなければ、後ろの PR の base は main に付け替わらない。そのままマージすると main ではなく前のブランチに入ってしまうので、マージ前に base を確認してもらう (起動先には PR 本文に Stack PR であることを書かせている)
+
 ## スクリプトがやっていること
 
 - `.local/{YYYY-MM-DD}_{issue}-session/prompt.md` にプロンプトを書き出す
@@ -77,7 +84,7 @@ blocked な issue は、blocker の変更がないと実装もテストもでき
 ~/.claude/skills/cmux-issue-session/scripts/launch.sh ABC-100 .local/2026-09-29_abc-100-resume/context.md
 ```
 
-Stack の後ろの issue に補足があるときは、`.local/{YYYY-MM-DD}_{issue 小文字}-session/context.md` に書いておく。その issue が後で自動起動されるとき、スクリプトがいちばん新しいものを拾って渡す。
+Stack の後ろの issue に補足があるときは、`.local/{YYYY-MM-DD}_{issue 小文字}-session/context.md` に書いておく。その issue が後で自動起動されるとき (`--base` 付きの起動のとき) だけ、スクリプトがいちばん新しいものを拾って渡す。普通の起動では拾わないので、補足は第 2 引数で渡す。
 
 書く内容の目安:
 
