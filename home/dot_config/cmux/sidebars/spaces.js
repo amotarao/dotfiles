@@ -168,9 +168,11 @@ const currentSpace = computed(() => {
   return sel ? spaceOf(sel) : null;
 });
 
-// Flat in a single space; under "all", one header per space.
+// Flat in a single space; under "all", one header per space. Rows are sorted
+// by last update (agent activity, else workspace latestAt), newest first.
 const agentEntries = computed(() => {
   const out = [];
+  const groups = [];
   const all = showAll();
   const cur = currentSpace();
   for (const sp of spaces()) {
@@ -178,17 +180,22 @@ const agentEntries = computed(() => {
     const rows = [];
     for (const w of sp.members) {
       const live = (w.agents ?? []).filter((a) => a.status !== "ended");
-      // Workspaces without a live agent still get a plain row, sorted last.
+      // Workspaces without a live agent still get a plain row.
       if (live.length === 0) {
-        rows.push({ key: "w:" + w.id, kind: "workspace", ws: w, rank: NONE.rank });
+        rows.push({ key: "w:" + w.id, kind: "workspace", ws: w, at: w.latestAt ?? 0 });
         continue;
       }
       for (const a of live) {
-        rows.push({ key: "a:" + w.id + ":" + a.id, kind: "agent", ws: w, agent: a, rank: stateOf(a.status).rank });
+        rows.push({ key: "a:" + w.id + ":" + a.id, kind: "agent", ws: w, agent: a, at: a.lastActivityAt ?? w.latestAt ?? 0 });
       }
     }
     if (rows.length === 0) continue;
-    rows.sort((x, y) => x.rank - y.rank);
+    rows.sort((x, y) => y.at - x.at);
+    groups.push({ sp, rows, at: rows[0].at });
+  }
+  // Under "all", spaces are ordered by their most recently updated row too.
+  groups.sort((x, y) => y.at - x.at);
+  for (const { sp, rows } of groups) {
     if (all) out.push({ key: "h:" + sp.key, kind: "header", label: sp.name, target: sp.target });
     out.push(...rows);
   }
